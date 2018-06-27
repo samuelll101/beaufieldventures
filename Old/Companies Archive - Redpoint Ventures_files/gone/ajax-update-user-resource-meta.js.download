@@ -1,0 +1,17 @@
+jQuery(document).ready(function($) {
+
+    // Perform AJAX update user meta on form submit
+    $('#user-id-form').on('submit', function(e){
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajaxUpdateMetaObject.ajaxurl,
+            data: { 
+                'action': 'updatemeta', //calls wp_ajax_updatemeta
+                'user_id': $('#user-id-form #user_id').val()
+            }
+        });
+        e.preventDefault();
+    });
+
+});

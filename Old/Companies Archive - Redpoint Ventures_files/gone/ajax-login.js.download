@@ -1,0 +1,27 @@
+jQuery(document).ready(function($) {
+
+    // Perform AJAX login on form submit
+    $('#loginform.login-custom').on('submit', function(e){
+        $('#loginform p.status').show().text(ajaxLoginObject.loadingmessage);
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajaxLoginObject.ajaxurl,
+            data: { 
+                'action': 'ajaxlogin', //calls wp_ajax_nopriv_ajaxlogin
+                'username': $('#loginform #username').val(), 
+                'password': $('#loginform #password').val(), 
+                'rememberme': $('#loginform #rememberme').val(), 
+                'security': $('#loginform #security').val()
+            },
+            success: function(data){
+                $('#loginform p.status').text(data.message);
+                if (data.loggedin == true){
+                    document.location.href = data.homeurl + '/resources';
+                }
+            }
+        });
+        e.preventDefault();
+    });
+
+});
