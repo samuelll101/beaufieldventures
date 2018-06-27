@@ -36,8 +36,14 @@ grid-auto-rows:    270px;
 		
 		text-align: center;
 		position: relative;
-		justify-items: center
-		align-items:   center
+		vertical-align: middle;
+		top: 50%;
+
+		
+			display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+		
 		
   	}
 	
@@ -52,11 +58,17 @@ grid-auto-rows:    270px;
 .box .box-layer_bottom {
 	opacity: 0;
 	position: absolute;
-	top: 0;
+    top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 
+
+
+
+
+	
+	
 	background: rgba(0, 0, 0, 0.8);
 	color: #fff;
 	padding: 15px;
@@ -116,7 +128,8 @@ grid-auto-rows:    270px;
 	 	 <div class="box">
 			<a href="#">
 				<img src="den.png">
-				<div class="box-layer_bottom">						
+				<div class="box-layer_bottom">	
+					<br><br>
 					Den
 					<br><br>
 					Building the next generation of light switches
