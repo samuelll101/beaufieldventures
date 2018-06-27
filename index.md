@@ -7,13 +7,11 @@
 <body>
 
 Den
-
-
-Future Housing
-www.getden.co.uk
-Building the next generation of light switches
-UK
-
+<br>
+Info: Building the next generation of light switches
+Sector: Future Housing
+Country: UK
+Website: <a href="www.getden.co.uk">www.getden.co.uk</a>
 
 
 
