@@ -40,12 +40,22 @@
 
 
 
-.wrapper .wrapper-layer_bottom {
+
+
+.hvrbox {
+
+	overflow: hidden;
+}
+
+
+
+
+.hvrbox .hvrbox-layer_bottom {
 	display: block;
 }
 
 
-.wrapper .wrapper-layer_top {
+.hvrbox .hvrbox-layer_top {
 	opacity: 0;
 	position: absolute;
 	top: 0;
@@ -64,9 +74,8 @@
 }
 
 
-.wrapper:hover .wrapper-layer_top,
-.wrapper:active .wrapper-layer_top,
-.wrapper:focus .wrapper-layer_top {
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
 	opacity: 1;
 }
 
@@ -85,8 +94,7 @@
 </head>
 
  <body>
-	<script type="text/javascript" src="js/hover-box.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
 	
 	<div class="wrapper">
 	
